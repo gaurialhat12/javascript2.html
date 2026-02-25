@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-color:white;
+        }
+
+        select, button {
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 18px;
+            color:black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Generation Classifier</h2>
+
+    <label for="year-select">Select Year:</label>
+    <select name="generation" id="year-select">
+        <option value=""> Select Year </option>
+        <script>
+            for (let i = 1940; i <= 2025; i++) {
+                document.write(`<option value="${i}">${i}</option>`);
+            }
+        </script>
+    </select>
+
+    <br>
+    <button onclick="showGeneration()">Check Generation</button>
+
+    <div id="result"></div>
+
+</body>
+  <script>
+        function classifygeneration(yearborn) {
+            yearborn = parseInt(yearborn);
+
+            if (yearborn >= 1946 && yearborn <= 1964) {
+                return "You are a Baby Boomer.";
+            }
+            else if (yearborn >= 1965 && yearborn <= 1980) {
+                return "You are part of Generation X.";
+            }
+            else if (yearborn >= 1981 && yearborn <= 1996) {
+                return "You are a Millennial.";
+            }
+            else if (yearborn >= 1997 && yearborn <= 2012) {
+                return "You are part of Generation Z.";
+            }
+            else if (yearborn >= 2013) {
+                return "You are part of Generation Alpha.";
+            }
+          
+        }
+
+        function showGeneration() {
+            const year = document.getElementById("year-select").value;
+
+            if (year === "") {
+                document.getElementById("result").innerHTML = "Please select a year.";
+                return;
+            }
+
+            const message = classifygeneration(year);
+            document.getElementById("result").innerHTML = message;
+        }
+    </script>
+
+</html>
