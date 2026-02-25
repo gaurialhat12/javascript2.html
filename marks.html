@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age</title>
+</head>
+<style>
+    .main{
+        height: 97vh;
+        width: 97vw;
+        background-color: powderblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    input{
+        height: 30px;
+    } 
+    button{
+        height: 30px;
+        width: 100px;
+        border: 3px solid ;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+    .res{
+        height: 40px;
+        width: 100%;
+        border: 3px solid;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+    }
+</style>
+<body>
+    <div class="main" id="main">
+        <div class="sub" id="sub">
+            <div class="inputdiv" id="inp1">
+                <input id="inp" type="number" placeholder="Enter your marks">
+                <button onclick="Sub()">Check Result</button>
+            </div>
+            <div class="res" id="res"></div>
+        </div>
+    </div>
+</body>
+<script>
+    function Sub(){
+        const elemINP=document.getElementById("inp").value
+        const elemRES=document.getElementById("res")
+        if(elemINP>=90){
+            elemRES.innerText="A grade"
+            
+            
+        } else if(elemINP>=80){
+            elemRES.innerText="B grade"
+        } else if(elemINP>=70){
+            elemRES.innerText="C grade"
+        } else if(elemINP>=60){
+            elemRES.innerText="D grade"
+        } else if(elemINP>=50){
+            elemRES.innerText="E grade"
+        } else if(elemINP>=40){
+            elemRES.innerText="P grade"
+        } else{
+            elemRES.innerHTML="Fail"
+            console.log(elemINP);
+        }
+    }
+</script>
+</html>
