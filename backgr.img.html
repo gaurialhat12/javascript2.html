@@ -34,7 +34,7 @@
     }
 </style>
 <body>
-    <div class="card" id="card"></div>
+    <div class="card" id="card">
      <div class="imgcnt" id="imgcnt">
             <img src="" alt="">
         </div>
@@ -45,11 +45,11 @@
             <button onclick="chn('images/stawbarry.webp')">strawberry</button>
         </div>
     </div>
+</body>
 <script>
     const chn=(url)=>{
         const elemImgcnt=document.getElementById("imgcnt")
         elemImgcnt.style.backgroundImage=`url('${url}')`
     }
 </script>
-</body>
 </html>
