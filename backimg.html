@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background-image: url();
+            background-size: cover;
+        }
+        button{
+            color: aliceblue;
+            background-color: darkblue;
+            font-size: 20px;
+            letter-spacing: 4px;
+            padding: 10px 20px;
+            border: none;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-image</title>
+</head>
+<body>
+    <button id="mybtn">change background-color</button>
+    <script>
+        var image=['url(music logo.png)']
+        var i=0;
+        Document.getEelemntById('mybtn').addEventListerner('click',function(){
+            if(i<=image.lenght-2){
+                i=++i;
+
+            }
+            else{
+                i=0;
+            }
+            Document.body.style.backgroundImage=image[i]
+
+        })
+    </script>
+</body>
+</html>
