@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><style>
+    body{
+        height: 97vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card{
+        height:400px;
+        border: 2px solid;
+    }
+    .imgcnt{
+        height: 350px;
+        border-bottom: 3px solid;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .btncnt{
+        height: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    button{
+        cursor: pointer;
+    }
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background image</title>
+</head>
+<body>
+    <div class="card" id="card"></div>
+     <div class="imgcnt" id="imgcnt">
+            <img src="" alt="">
+        </div>
+        <div class="btncnt">
+            <button onclick="chn('')">mango</button>
+            <button onclick="chn('')">apple</button>
+            <button onclick="chn('')">watermelon</button>
+            <button onclick="chn('')">strawberry</button>
+        </div>
+    </div>
+<script>
+    const chn=(url)=>{
+        const elemImgcnt=document.getElementById("imgcnt")
+        elemImgcnt.style.backgroundImage=`url('${url}')`
+    }
+</script>
+</body>
+</html>
