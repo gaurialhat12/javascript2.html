@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* div{
+            border: 2px solid black;
+            height: 10vh;
+            width: 15vw;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            flex-direction: row;
+        } */
+        #table{
+          margin-top: 10px;
+        }
+        button{
+            margin-top: 10px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id/="input">Enter a number:<input type="number"></div> -->
+     <div>
+        <input type="number" id="input" placeholder="Enter a number">
+     </div>
+    <button onclick="table()">Submit</button>
+    <div id="tbl"></div>
+</body>
+<script>
+    const table=()=>{
+        let i=1
+        const eleminput=document.getElementById("input").value
+        const elemTable=document.getElementById("tbl")
+        for(i=1;i<=10;i++){
+            console.log(`${eleminput} x ${i} = ${eleminput*i}`);
+            let res=`${eleminput} x ${i} = ${eleminput*i}`
+            const createElem=document.createElement("div")
+            createElem.innerText=res
+            elemTable.append(createElem)
+        }
+    }
+</script>
+</html>
