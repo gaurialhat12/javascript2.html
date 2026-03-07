@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GREETING</title>
+</head>
+<body>
+    <div class="main" id="main">
+        <div class="inpdiv"><input placeholder="Enter name" id="inp" type="text"></div>
+        <button>Submit</button>
+    </div>
+</body>
+<script>
+    const greet=()=>{
+        const eleminp=document.getElementById("inp").value
+        alert(`Hello ${eleminp}`)
+    }
+    greet();
+</script>
+</html>
