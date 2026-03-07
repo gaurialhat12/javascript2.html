@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create div</title>
+</head>
+<style>
+    .test{
+        height: 100px;
+        width: 100px;
+        border: 3px solid yellow;
+    }
+    #res{
+        display: flex;
+        flex-wrap: wrap;
+    }
+</style>
+<body>
+    <button onclick="createfun()">create</button>
+    <div id="res"></div>
+    
+</body>
+<script>
+    const createfun=()=>{
+        const createElem=document.createElement("div");
+        const res=document.getElementById("res")
+        createElem.className="test"
+        createElem.style.height=100+"px"
+        createElem.style.width=100+"px"
+        createElem.style.bordertop=2+"px"+"solid"+"yellow"
+        createElem.style.borderBottom=2+"px"+"solid"+"red"
+        createElem.style.borderLeft=2+"px"+"solid"+"pink"
+        createElem.style.borderRight=2+"px"+"solid"+"skyblue"
+        res.append(createElem)
+    }
+</script>
+</html>
