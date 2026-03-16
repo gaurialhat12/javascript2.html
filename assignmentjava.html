@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student data</title>
+</head>
+<style>
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sub{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+    .cd{
+        height: 125px;
+        width: 225px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #e7c6ff;
+        border-radius:10px;
+    }
+    .idd{
+        position: relative;
+        left: 220px;
+    }
+    .named,.roll,.mks{
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="main" id="main">
+        <div class="sub" id="sub"></div>
+    </div>
+</body>
+<script>
+    let data = [
+    {
+        id: 1,
+        name: "disha",
+        rollnumber: 101,
+        marks: 78
+    },
+    {
+        id: 2,
+        name: "rahul",
+        rollnumber: 102,
+        marks: 85
+    },
+    {
+        id: 3,
+        name: "priya",
+        rollnumber: 103,
+        marks: 72
+    },
+    {
+        id: 4,
+        name: "amit",
+        rollnumber: 104,
+        marks: 90
+    },
+    {
+        id: 5,
+        name: "neha",
+        rollnumber: 105,
+        marks: 67
+    },
+    {
+        id: 6,
+        name: "rohan",
+        rollnumber: 106,
+        marks: 81
+    },
+    {
+        id: 7,
+        name: "sneha",
+        rollnumber: 107,
+        marks: 76
+    },
+    {
+        id: 8,
+        name: "karan",
+        rollnumber: 108,
+        marks: 88
+    },
+    {
+        id: 9,
+        name: "pooja",
+        rollnumber: 109,
+        marks: 69
+    },
+    {
+        id: 10,
+        name: "arjun",
+        rollnumber: 110,
+        marks: 92
+    }
+];
+const sub=document.getElementById("sub")
+data.forEach((item,index)=>{
+    const createDiv=document.createElement("div")
+    createDiv.className="cd"
+    const elemid=document.createElement("div")
+    elemid.className="idd"
+    const elemname=document.createElement("h4")
+    elemname.className="named"
+    const elemroll=document.createElement("div")
+    elemroll.className="roll"
+    const elemmks=document.createElement("div")
+    elemmks.className="mks"
+    elemid.innerText=item.id
+    elemname.innerText=item.name
+    elemroll.innerText=item.rollnumber
+    elemmks.innerText=item.marks
+    createDiv.append(elemid)
+    createDiv.append(elemname)
+    createDiv.append(elemroll)
+    createDiv.append(elemmks)
+    sub.append(createDiv)
+})
+</script>
+</html>
