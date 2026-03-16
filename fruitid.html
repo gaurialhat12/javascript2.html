@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.fruit-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.fruit-item:last-child {
+    border-bottom: none;
+}
+
+.fruit-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.fruit-description {
+    color: #666;
+    margin-top: 5px;
+}
+
+.fruit-id {
+    color: #999;
+    font-size: 0.8em;
+    margin-bottom: 5px;
+}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Identifier</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fruit List</h1>
+        <div id="fruit-list">
+            <!-- Fruits will be dynamically added here by JavaScript -->
+        </div>
+    </div>
+    <script src="script.js">
+</body>
+<script>
+// Sample data: array of objects, each with an id, name, and description
+const fruits = [
+    { id: 1, name: 'Apple', description: 'A crisp, sweet fruit rich in fiber and vitamin C.' },
+    { id: 2, name: 'Banana', description: 'A soft, tropical fruit known for its high potassium content.' },
+    { id: 3, name: 'Orange', description: 'A citrus fruit packed with vitamin C, known for its tangy flavor.' },
+    { id: 4, name: 'Mango', description: 'A sweet, juicy stone fruit from the tropics.' },
+];
+
+function displayFruits() {
+    const fruitListContainer = document.getElementById('fruit-list');
+    
+    // Check if container exists
+    if (!fruitListContainer) {
+        console.warn('#fruit-list element not found');
+        return;
+    }
+
+    // Iterate over the fruits array and create HTML elements
+    fruits.forEach(fruit => {
+        const fruitDiv = document.createElement('div');
+        fruitDiv.className = 'fruit-item';
+
+        const idPara = document.createElement('p');
+        idPara.className = 'fruit-id';
+        idPara.textContent = `ID: ${fruit.id}`;
+
+        const namePara = document.createElement('p');
+        namePara.className = 'fruit-name';
+        namePara.textContent = fruit.name;
+
+        const descPara = document.createElement('p');
+        descPara.className = 'fruit-description';
+        descPara.textContent = fruit.description;
+
+        fruitDiv.appendChild(idPara);
+        fruitDiv.appendChild(namePara);
+        fruitDiv.appendChild(descPara);
+
+        fruitListContainer.appendChild(fruitDiv);
+    });
+}
+
+// Call the function to display the fruits when the script loads
+document.addEventListener('DOMContentLoaded', displayFruits);
+</script>
+
+</html>
