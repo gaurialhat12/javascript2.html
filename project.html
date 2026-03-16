@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product data</title>
+</head>
+<style>
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sub{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+    .cd{
+        height: 125px;
+        width: 225px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #e7c6ff;
+        border-radius:10px;
+    }
+    .idd{
+        position: relative;
+        left: 220px;
+    }
+    .named,.category,.price{
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="main" id="main">
+        <div class="sub" id="sub"></div>
+    </div>
+</body>
+<script>
+    let data = [
+    {
+        p_id: 1,
+        p_name: "smartphone",
+        category: electronic,
+        price: 55000
+    },
+    {
+        id: 2,
+        name: "watch",
+        category: electronic,
+        price: 33000
+    },
+    {
+        id: 3,
+        name: "shoe",
+        category: fashion,
+        price: 10000
+    },
+    {
+        id: 4,
+        name: "headphone",
+        category: "electronics",
+        price: 40000
+    },
+    {
+        id: 5,
+        name: "smarttv",
+        category: electronic,
+        price: 350000
+    },
+    {
+        id: 6,
+        name:  "Wireless Mouse",
+        category: electronic,
+        price: 1500
+    },
+    {
+        id: 7,
+        name: "Power Bank",
+        category: electronic,
+        price: 5000
+    },
+    {
+        id: 8,
+        name: "laptop",
+        category: electronic,
+        price: 60000
+    },
+    {
+        id: 9,
+        name: "jeans",
+        category: fashion,
+        price: 4000
+    },
+    {
+        id: 10,
+        name: "tablet",
+        category: electronic,
+        price: 39000
+    }
+];
+const sub=document.getElementById("sub")
+data.forEach((item,index)=>{
+    const createDiv=document.createElement("div")
+    createDiv.className="cd"
+    const elemid=document.createElement("div")
+    elemid.className="idd"
+    const elemname=document.createElement("h4")
+    elemname.className="named"
+    const elemroll=document.createElement("div")
+    elemroll.className="catogory"
+    const elemmks=document.createElement("div")
+    elemmks.className="price"
+    elemid.innerText=item.id
+    elemname.innerText=item.name
+    elemroll.innerText=item.category
+    elemmks.innerText=item.price
+    createDiv.append(elemid)
+    createDiv.append(elemname)
+    createDiv.append(elecategory)
+    createDiv.append(elemprice)
+    sub.append(createDiv)
+})
+</script>
+</html>
