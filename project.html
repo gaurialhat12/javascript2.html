@@ -45,19 +45,19 @@
     {
         p_id: 1,
         p_name: "smartphone",
-        category: electronic,
+        category: "electronic",
         price: 55000
     },
     {
         id: 2,
         name: "watch",
-        category: electronic,
+        category: "{electronic",
         price: 33000
     },
     {
         id: 3,
         name: "shoe",
-        category: fashion,
+        category: "fashion",
         price: 10000
     },
     {
@@ -69,37 +69,37 @@
     {
         id: 5,
         name: "smarttv",
-        category: electronic,
+        category: "electronic",
         price: 350000
     },
     {
         id: 6,
         name:  "Wireless Mouse",
-        category: electronic,
+        category: "electronic",
         price: 1500
     },
     {
         id: 7,
         name: "Power Bank",
-        category: electronic,
+        category: "electronic",
         price: 5000
     },
     {
         id: 8,
         name: "laptop",
-        category: electronic,
+        category: "electronic",
         price: 60000
     },
     {
         id: 9,
         name: "jeans",
-        category: fashion,
+        category: "fashion",
         price: 4000
     },
     {
         id: 10,
         name: "tablet",
-        category: electronic,
+        category: "electronic",
         price: 39000
     }
 ];
@@ -111,14 +111,14 @@ data.forEach((item,index)=>{
     elemid.className="idd"
     const elemname=document.createElement("h4")
     elemname.className="named"
-    const elemroll=document.createElement("div")
-    elemroll.className="catogory"
-    const elemmks=document.createElement("div")
-    elemmks.className="price"
+    const elemcategory=document.createElement("div")
+    elemcategory.className="catogory"
+    const elemprice=document.createElement("div")
+    elemprice.className="price"
     elemid.innerText=item.id
     elemname.innerText=item.name
-    elemroll.innerText=item.category
-    elemmks.innerText=item.price
+    elemcategory.innerText=item.category
+    elemprice.innerText=item.price
     createDiv.append(elemid)
     createDiv.append(elemname)
     createDiv.append(elecategory)
