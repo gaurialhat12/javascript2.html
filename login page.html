@@ -1,0 +1,59 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ <style>
+        body{
+            height: 97vh;
+            width: 100vw;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        input{
+            border: 1px solid black;
+            height: 50px;
+            width: 190px;
+            margin-bottom: 20px;
+        }
+    </style>
+<body>
+    <div>
+        <h1>Login page</h1>
+        <h2>Name:</h2>
+        <input type="text" placeholder="Enter your name" id="inp1">
+        <br>
+        <span id="err"></span>
+        <h2>Password:</h2>
+        <input type="password" placeholder="Enter your password">
+        <span id="error"></span>
+        <br>
+        <button onclick="validData()">Login</button>
+        
+    </div>
+</body>
+<script>
+    const validData=()=>{
+        const elemINP1=document.getElementById("inp1").value
+        const elemERR=document.getElementById("err")
+        if(elemINP1==null || elemINP1===""){
+            elemERR.innerText="this field is required"
+            elemERR.style.color="red"
+        } else{
+            elemERR.innerText=" "
+        }
+    }
+        const elemInp2=document.getElementById("inp2").value
+        const elemerror=document.getElementById("error")
+        if(elemInp2==null || elemInp2===""){
+            elemerror.innerText="enter your password"
+            elemerror.style.color="red"
+        }else{
+            elemerror.innerText=" "
+        }
+</script>
+</html>
