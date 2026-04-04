@@ -1,0 +1,19 @@
+const getData = async () => {
+    const req = await fetch("https://dummyjson.com/products");
+    const res = await req.json();
+
+    const elemMAIN = document.getElementById("main");
+
+    res.products.forEach((item) => {
+        const elemCREATEH1 = document.createElement("h1");
+        const elemIMG = document.createElement("img");
+
+        elemIMG.src = item.thumbnail;
+        elemCREATEH1.innerHTML = item.title;
+
+        elemMAIN.append(elemCREATEH1);
+        elemMAIN.append(elemIMG);
+    });
+};
+
+getData();
